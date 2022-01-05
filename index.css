@@ -1,0 +1,38 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 1rem;
+    text-align: center;
+    margin: auto;
+    font-size: 18px;
+}
+table tr td{
+    width: 50px;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+}
+
+table{
+    margin: auto;
+    border-collapse: collapse;
+}
+input{
+    border: 2px solid purple;
+    border-radius: 1rem;
+    width: 10rem;
+    height: 3rem;
+}
+button{
+    margin: 2rem;
+    width: 180px;
+    height: 50px;
+    border-radius:50px ;
+    border: 1px solid red;
+    cursor: pointer;
+    background-color: purple;
+    color: white;
+}
+#err{
+    display: none;
+}
