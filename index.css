@@ -1,3 +1,8 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
 body{
     font-family: 'Times New Roman', Times, serif;
     padding-top: 1rem;
@@ -35,28 +40,4 @@ button{
 }
 #err{
     display: none;
-}
-@media only screen and(min-width:500px){
-    body{
-        color: black;
-    }
-    button{
-        background-color: red;
-    }
-    table{
-        table-layout:fixed;
-        width: 100vw;
-        height: 100vh;
-    }
-    table tr td{
-        width: 20px;
-        padding-left: 0.3rem;
-    padding-top: 0.3rem;
-    padding-right: 0.3rem;
-    padding-bottom: 0.3rem;
-    }
-    div{
-        margin: auto;
-        width: 50%;
-    }
 }
