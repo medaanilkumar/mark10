@@ -36,7 +36,7 @@ button{
 #err{
     display: none;
 }
-@media only screen and(max-width:600px){
+@media only screen and(max-width:500px){
     body{
         color: black;
     }
