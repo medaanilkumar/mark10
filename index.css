@@ -39,7 +39,8 @@ button{
 @media only screen and(min-width:600px){
     table{
         table-layout:fixed;
-        width: 50%;
+        width: 100vw;
+        height: 100vh;
     }
     table tr td{
         width: 20px;
