@@ -15,6 +15,7 @@ btn.addEventListener('click',function(){
     bill=parseInt(bill.value)
     cash=parseInt(cash.value)
     if(bill<cash){
+        var total=Math.abs(bill-cash)
         while(total!=0){
          total=twoT(total)
          if(total)
@@ -35,9 +36,6 @@ btn.addEventListener('click',function(){
         }
         
     }
-    else{
-        err.style.display='block'
-    }
 })
 function twoT(total){
     while(total>=2000){
@@ -45,7 +43,7 @@ function twoT(total){
         total=Math.abs((2000*quotienttwo)-total)
         twoTs.innerHTML=quotienttwo
     }
-   
+    
     
     return total
 }
@@ -65,7 +63,7 @@ function hundred(total){
         total=Math.abs((100*quotientH)-total)
         hundredTs.innerHTML=quotientH
     }
-
+   
     return total
 }
 function fifty(total){
