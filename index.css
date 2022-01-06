@@ -42,6 +42,7 @@ button{
         height: 100px;
     }
     body{
-        align-items: center;
+        max-width: 400px;
+        margin: auto;
     }
 }
