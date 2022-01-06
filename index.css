@@ -37,6 +37,9 @@ button{
     display: none;
 }
 @media only screen and(max-width:600px){
+    body{
+        color: black;
+    }
     button{
         background-color: red;
     }
