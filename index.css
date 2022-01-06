@@ -41,7 +41,8 @@ button{
         width: 900px;
         height: 100px;
     }
-    body{
-      margin-left: 3rem;
+    div{
+        margin: auto;
+        width: 50%;
     }
 }
