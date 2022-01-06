@@ -41,4 +41,7 @@ button{
         width: 900px;
         height: 100px;
     }
+    body{
+        align-items: center;
+    }
 }
