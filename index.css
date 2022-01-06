@@ -36,8 +36,9 @@ button{
 #err{
     display: none;
 }
-@media only screen and(min-width:500px){
+@media only screen and(min-width:400px){
     table{
-        width: auto;
+        width: 900px;
+        height: 100px;
     }
 }
