@@ -15,8 +15,6 @@ btn.addEventListener('click',function(){
     bill=parseInt(bill.value)
     cash=parseInt(cash.value)
     if(bill<cash){
-    total=Math.abs(bill-cash)
-    console.log(total)
         while(total!=0){
          total=twoT(total)
          if(total)
@@ -35,65 +33,48 @@ btn.addEventListener('click',function(){
         total=one(total)
 
         }
+        
+    }
+    else{
+        err.style.display='block'
     }
 })
-if(twoTs.value===undefined){
-        console.log("inside und")
-        twoTs.innerHTML=""
-    }
-if(oneTs.value===undefined){
-        console.log("inside und")
-        oneTs.innerHTML=""
-    }
 function twoT(total){
     while(total>=2000){
         var quotienttwo=Math.floor(total/2000)
         total=Math.abs((2000*quotienttwo)-total)
+        twoTs.innerHTML=quotienttwo
     }
    
-    twoTs.innerHTML=quotienttwo
-    // if(twoTs.value===undefined){
-    //     console.log("inside und")
-    //     twoTs.innerHTML=""
-    // }
+    
     return total
 }
 function oneT(total){
     while(total>=1000){
         var quotientone=Math.floor(total/500)
         total=Math.abs((1000*quotientone)-total)
+        oneTs.innerHTML=quotientone
     }
    
-    oneTs.innerHTML=quotientone
-    // if(oneTs.value===undefined){
-    //     console.log("inside und")
-    //     oneTs.innerHTML=""
-    // }
+    
     return total
 }
 function hundred(total){
     while(total>=100){
         var quotientH=Math.floor(total/100)
         total=Math.abs((100*quotientH)-total)
+        hundredTs.innerHTML=quotientH
     }
-hundredTs.innerHTML=quotientH
-// if(hundredTs.value===undefined){
-//     console.log("inside und")
-//     hundredTs.innerHTML=""
-// }
-    
+
     return total
 }
 function fifty(total){
     while(total>=50){
         var quotientF=Math.floor(total/50)
         total=Math.abs((50*quotientF)-total)
+        fiftyTs.innerHTML=quotientF
     }
-    // if(fiftyTs.value===undefined){
-    //     console.log("inside und")
-    //     fiftyTs.innerHTML=""
-    // }
-    fiftyTs.innerHTML=quotientF
+    
     
     
     return total
@@ -102,50 +83,39 @@ function twenty(total){
     while(total>=20){
         var quotientTw=Math.floor(total/20)
         total=Math.abs((20*quotientTw)-total)
+        twentyTs.innerHTML=quotientTw
     }
    
-    twentyTs.innerHTML=quotientTw
-    // if(twentyTs.value===undefined){
-    //     console.log("inside und")
-    //     twentyTs.innerHTML=""
-    // }
+    
     return total
 }
 function ten(total){
     while(total>=10){
         var quotientTe=Math.floor(total/10)
         total=Math.abs((20*quotientTe)-total)
+        tenTs.innerHTML=quotientTe
     }
    
-    tenTs.innerHTML=quotientTe
-    // if(tenTs.value===undefined){
-    //     console.log("inside und")
-    //     tenTs.innerHTML=""
-    // }
+    
     return total
 }
 function five(total){
     while(total>=5){
         var quotientF=Math.floor(total/5)
         total=Math.abs((5*quotientF)-total)
+        fiveTs.innerHTML=quotientF
     }
    
-    fiveTs.innerHTML=quotientF
-    // if(fiveTs.value===undefined){
-    //     console.log("inside und")
-    //     fiveTs.innerHTML=""
-    // }
+    
     return total
 }
 function one(total){
     while(total>=1){
         var quotientO=Math.floor(total/1)
         total=Math.abs((1*quotientO)-total)
+        oneR.innerHTML=quotientO
     }
-    oneR.innerHTML=quotientO
-    // if(oneR.value===undefined){
-    //     console.log("inside und")
-    //     oneR.innerHTML=""
-    // }
+   
     return total
 }
+
