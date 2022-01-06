@@ -39,10 +39,7 @@ button{
 @media only screen and(min-width:600px){
     table tr td{
         width: 20px;
-        padding-left: 1rem;
-        padding-top: 1rem;
-        padding-right: 1rem;
-        padding-bottom: 1rem;
+        
     }
     div{
         margin: auto;
