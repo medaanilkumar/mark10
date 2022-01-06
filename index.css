@@ -41,3 +41,20 @@ button{
 #err{
     display: none;
 }
+
+@media only screen and (max-width: 600px) {
+    body{
+        background-color: aqua;
+    }
+    body table{
+        table-layout: fixed;
+
+    }
+    table tr td{
+        width: 50px;
+        padding-left: 0.5rem;
+        padding-top: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 1rem;
+    }
+}
