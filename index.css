@@ -21,6 +21,7 @@ table tr td{
 table{
     margin: auto;
     border-collapse: collapse;
+    display: none;
 }
 input{
     border: 2px solid purple;

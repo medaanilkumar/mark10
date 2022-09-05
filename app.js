@@ -1,119 +1,51 @@
-console.log("hi")
-var bill=document.querySelector('#bill')
-var cash=document.querySelector('#cash')
-var btn=document.querySelector('#btn')
-var err=document.querySelector('#err')
-var twoTs=document.querySelector('#twoT')
-var oneTs=document.querySelector('#oneT')
-var hundredTs=document.querySelector('#hundred')
-var fiftyTs=document.querySelector('#fifty')
-var twentyTs=document.querySelector('#twenty')
-var tenTs=document.querySelector('#ten')
-var fiveTs=document.querySelector('#five')
-var oneR=document.querySelector('#one')
-btn.addEventListener('click',function(){
-    bill=parseInt(bill.value)
-    cash=parseInt(cash.value)
-    if(bill<cash){
-        var total=Math.abs(bill-cash)
-        while(total!=0){
-         total=twoT(total)
-         if(total)
-         total=oneT(total)
-         if(total)
-         total=hundred(total)
-         if(total)
-         total=fifty(total)
-        if(total)
-        total=twenty(total)
-        if(total)
-        total=ten(total)
-        if(total)
-        total=five(total)
-        if(total)
-        total=one(total)
+const billamount=document.querySelector("#bill");
+const cashgiven=document.querySelector("#cash");
+const err=document.querySelector("#err");
+const checkbutton=document.querySelector("#btn")
+var denominations=[2000,500,100,50,20,10,5,2,1]
+const notes=document.querySelectorAll("#row")
+const table=document.querySelector("#myTable")
+var clickhandler=()=>{
 
-        }
-        
+  const billamnt=parseInt(billamount.value);
+  const cashamnt=parseInt(cashgiven.value);
+  if(billamount.value===''||cashgiven.value==='')
+  {
+    showmessage("Enter all the fields Please!!");
+  }
+  else
+  {
+    err.style.display="none";
+    if(billamnt<=0)
+    {
+      showmessage("Enter a valid Bill Amount!!")
     }
-})
-function twoT(total){
-    while(total>=2000){
-        var quotienttwo=Math.floor(total/2000)
-        total=Math.abs((2000*quotienttwo)-total)
-        twoTs.innerHTML=quotienttwo
+    else
+    {
+      if(cashamnt < billamnt)
+      {
+        console.log(table)
+        table.style.display="none"
+        showmessage("Do you want to wash Dishes !!! ?")
+      }
+      else{
+        table.style.display="block"
+        err.style.display="none";
+        setAmount(cashamnt-billamnt)
+      }
     }
-    
-    
-    return total
+  }
 }
-function oneT(total){
-    while(total>=1000){
-        var quotientone=Math.floor(total/500)
-        total=Math.abs((1000*quotientone)-total)
-        oneTs.innerHTML=quotientone
-    }
-   
-    
-    return total
+var setAmount=(amount)=>{
+  for(let i=0;i<9;i++)
+  {
+    var curamount=Math.trunc(amount/denominations[i]);
+    notes[i].innerText=(curamount!="Nan") ? Math.trunc(curamount) : 0;
+    amount=amount%denominations[i];
+  }
 }
-function hundred(total){
-    while(total>=100){
-        var quotientH=Math.floor(total/100)
-        total=Math.abs((100*quotientH)-total)
-        hundredTs.innerHTML=quotientH
-    }
-   
-    return total
+var showmessage=(msg)=>{
+  err.style.display="block";
+  err.innerText=msg;
 }
-function fifty(total){
-    while(total>=50){
-        var quotientF=Math.floor(total/50)
-        total=Math.abs((50*quotientF)-total)
-        fiftyTs.innerHTML=quotientF
-    }
-    
-    
-    
-    return total
-}
-function twenty(total){
-    while(total>=20){
-        var quotientTw=Math.floor(total/20)
-        total=Math.abs((20*quotientTw)-total)
-        twentyTs.innerHTML=quotientTw
-    }
-   
-    
-    return total
-}
-function ten(total){
-    while(total>=10){
-        var quotientTe=Math.floor(total/10)
-        total=Math.abs((20*quotientTe)-total)
-        tenTs.innerHTML=quotientTe
-    }
-   
-    
-    return total
-}
-function five(total){
-    while(total>=5){
-        var quotientF=Math.floor(total/5)
-        total=Math.abs((5*quotientF)-total)
-        fiveTs.innerHTML=quotientF
-    }
-   
-    
-    return total
-}
-function one(total){
-    while(total>=1){
-        var quotientO=Math.floor(total/1)
-        total=Math.abs((1*quotientO)-total)
-        oneR.innerHTML=quotientO
-    }
-   
-    return total
-}
-
+checkbutton.addEventListener("click",clickhandler);
